@@ -1,10 +1,14 @@
 import 'src/App.css'
 
+import NavBar from 'src/components/NavBar';
+import Hero from 'src/components/Hero';
+
 function App() {
 
   return (
     <>
-      <h2>Time To React!</h2>
+      <NavBar />
+      <Hero />
     </>
   )
 }
