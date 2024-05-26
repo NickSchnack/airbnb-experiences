@@ -1,26 +1,32 @@
 :root {
-    --background-color: #FFFF;
-    --header-color: #FFFF;;
-    --font-color: #000000;
+    --background-color: #FFFFFF;
+    --header-color: #FFFFFF;;
+
+    --font-primary-color: #000000;
+    --font-secondary-color: #918E9B;
+
+    --font-status-color: #222222;
 }
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 html, body {
-    height: 100%;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: var(--font-color);
+    background-color: var(--background-color);
+    color: var(--font-primary-color);
 }
 
 #root {
-    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    /* min-height: 100vh; */
-    height: 100%;
+    height: 100vh;
     overflow: auto;
 }
 
@@ -36,15 +42,18 @@ img {
 
 nav {  
     display: flex;
-    height: 10%;
     width: 100%;
     background-color: var(--header-color);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    padding: .8rem;
+    padding: 2em;
+
+    img {
+        max-height: 3rem;
+    }
 }
 
-section {
-    padding: 1rem;
+/* section {
+    padding: 1em;
 }
 
 .hero {
@@ -68,4 +77,48 @@ section {
         font-size: .7em;
         font-weight: lighter;        
     }
+} */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 25%;
+    /* padding: 0; */
+
+    .card--image {        
+        border-radius: 1em;
+    }
+
+    .card--status {
+        background-color: var(--background-color);
+        color: var(--font-status-color);
+        position: absolute;
+        top: .8em;
+        left: .8em;        
+        padding: .25em .5em;
+        border-radius: .3em;
+        font-size: 1.5em;        
+        text-transform: uppercase;
+    }
+
+    .card--reviews {
+        color: var(--font-primary-color);
+        background-color: red;
+        
+        img {
+            /* margin: 0; */
+            /* shape-margin: 0; */
+            /* vertical-align: none; */
+        }
+
+        .card--reviews-count {
+            color: var(--font-secondary-color);
+        }
+        
+        .card--reviews-country {
+            color: var(--font-secondary-color);
+        }
+    }
+    
 }
